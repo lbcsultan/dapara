@@ -53,13 +53,11 @@ export default function ShippingAddressPage() {
             <label className="p-2" htmlFor={payment}>
               {payment}
             </label>
-            {errors.paymentMethod && (
-              <div className="text-red-500 ">
-                {errors.paymentMethod.message}
-              </div>
-            )}
           </div>
         ))}
+        {errors.paymentMethod && (
+          <div className="text-red-500 ">{errors.paymentMethod.message}</div>
+        )}
         <div className="mb-4 flex justify-between">
           <button
             onClick={() => router.push('/shipping')}
